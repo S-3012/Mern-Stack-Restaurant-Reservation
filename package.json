@@ -1,29 +1,35 @@
 {
-  "name": "yallist",
-  "version": "3.1.1",
-  "description": "Yet Another Linked List",
-  "main": "yallist.js",
+  "name": "ipaddr.js",
+  "description": "A library for manipulating IPv4 and IPv6 addresses in JavaScript.",
+  "version": "1.9.1",
+  "author": "whitequark <whitequark@whitequark.org>",
   "directories": {
-    "test": "test"
+    "lib": "./lib"
   },
-  "files": [
-    "yallist.js",
-    "iterator.js"
-  ],
   "dependencies": {},
   "devDependencies": {
-    "tap": "^12.1.0"
+    "coffee-script": "~1.12.6",
+    "nodeunit": "^0.11.3",
+    "uglify-js": "~3.0.19"
   },
   "scripts": {
-    "test": "tap test/*.js --100",
-    "preversion": "npm test",
-    "postversion": "npm publish",
-    "postpublish": "git push origin --all; git push origin --tags"
+    "test": "cake build test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/isaacs/yallist.git"
+  "files": [
+    "lib/",
+    "LICENSE",
+    "ipaddr.min.js"
+  ],
+  "keywords": [
+    "ip",
+    "ipv4",
+    "ipv6"
+  ],
+  "repository": "git://github.com/whitequark/ipaddr.js",
+  "main": "./lib/ipaddr.js",
+  "engines": {
+    "node": ">= 0.10"
   },
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
-  "license": "ISC"
+  "license": "MIT",
+  "types": "./lib/ipaddr.js.d.ts"
 }
